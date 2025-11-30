@@ -16,11 +16,19 @@ sudo ufw default allow outgoing
 # Allow WireGuard port
 sudo ufw allow 51820/udp
 
-# Allow SSH from LAN subnet
+# Allow SSH from LAN & VPN subnet
 sudo ufw allow from 192.168.178.0/24 to any port 22
-
-# Allow SSH from VPN subnet
 sudo ufw allow from 10.3.70.0/24 to any port 22
+
+# Allow LAN devices & VPN clients to query DNS [DNSCrypt]
+sudo ufw allow from 192.168.178.0/24 to any port 53 proto udp
+sudo ufw allow from 192.168.178.0/24 to any port 53 proto tcp
+sudo ufw allow from 10.3.70.0/24 to any port 53 proto udp
+sudo ufw allow from 10.3.70.0/24 to any port 53 proto tcp
+
+# Allow LAN access to Monitoring UI [DNSCrypt]
+sudo ufw allow from 192.168.178.0/24 to any port 8001
+sudo ufw allow from 10.3.70.0/24 to any port 8001
 
 # Enable logging for blocked connections
 sudo ufw logging on
@@ -30,6 +38,10 @@ sudo ufw enable
 
 # Check status
 sudo ufw status verbose
+sudo ufw status numbered
+
+# Delete rules
+sudo ufw delete 4
 
 # Confirm no other services are exposed
 sudo iptables -L -v -n

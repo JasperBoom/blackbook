@@ -1,9 +1,6 @@
-# Changelog
-## Version dev
-- Transfered OneDrive markdown files to repository.
-- Added a LICENSE.
-- Added a README.
-- Added a config for DNSCrypt.
+# Documentation
+This folder contains markdown files with specific descriptions for installment,
+configuration and other comments.
 
 ```
 Copyright (C) 2025 Jasper Boom
