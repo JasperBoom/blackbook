@@ -1,6 +1,7 @@
 # Blackbook
 Blackbook is a personal reference repository where I organize and store all
 kinds of technical documentation related to my hardware and software setups.
+
 It’s my go-to resource for:
 - Installing and configuring Windows PCs, Ubuntu workstations, and Raspberry
   Pi devices.

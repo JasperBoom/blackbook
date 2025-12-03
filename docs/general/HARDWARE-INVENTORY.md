@@ -19,7 +19,8 @@ and Windows license keys. Dates indicate purchase or installation where known.
 | CPU       | Intel Core i7-8700 3.20 GHz |      |
 | GPU       | MSI 4GB D5 X GTX970         |      |
 
-## Storage - Desktop
+## Storage
+**PC:**
 | Component | Model                                   | Date           |
 |-----------|-----------------------------------------|----------------|
 | HDD       | Western Digital 1 TB WD10EZEX Blue (2x) | 24-04-2018 / ? |
@@ -27,7 +28,7 @@ and Windows license keys. Dates indicate purchase or installation where known.
 | SSD       | Samsung 850 EVO 500 GB                  | 28-08-2017     |
 | M.2 SSD   | Samsung 970 EVO 1 TB                    | 28-02-2021     |
 
-## Storage - Laptop
+**Lalptop:**
 | Component | Model                | Date       |
 |-----------|----------------------|------------|
 | M.2 SSD   | Samsung 980 PRO 1 TB | 02-08-2021 |

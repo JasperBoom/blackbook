@@ -396,7 +396,7 @@ reject_ttl = 10
 ## Route queries for specific domains to a dedicated set of servers.
 ## See the `example-forwarding-rules.txt` file for an example.
 
-# forwarding_rules = 'forwarding-rules.txt'
+forwarding_rules = 'forwarding-rules.txt'
 
 ###############################################################################
 #                              Cloaking                                       #

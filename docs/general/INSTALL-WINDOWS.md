@@ -52,7 +52,7 @@ specialized systems. Grouped by typical usage or device category.
     - microsoft store
     - microsoft.com
 
-## Livestream PC Fiks
+## Livestream Software
 - NDI Tools
 - Team Performance
 - Commercials

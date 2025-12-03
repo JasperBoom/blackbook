@@ -48,7 +48,6 @@ assignment, device name, capacity, storage type, and station.
 | D1-JB     | Desktop thuis              | Windows |
 | U1-JB     | Desktop thuis              | Ubuntu  |
 | L1-JB     | Laptop Asus FX506LH-HN004T | Windows |
-| U2-JB     | Laptop Asus FX506LH-HN004T | Ubuntu  |
 | D1-FIKS   | Desktop livestream Fiks    | Windows |
 | L1-FIKS   | Laptop Acer Aspire 3       | Windows |
 | D2-FIKS   | Desktop studio Fiks        | Windows |

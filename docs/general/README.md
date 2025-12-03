@@ -1,12 +1,7 @@
-# Changelog
-## Version dev
-- Transfered OneDrive markdown files to repository.
-- Added a LICENSE.
-- Added a README.
-- Added a config for DNSCrypt.
-- Added notes for DNSCrypt.
-- Added notes for WireGuard.
-- Added notes for UFW.
+# General
+This folder contains Markdown files that provide general information, as
+well as documentation that applies to all devices or to specific subsets
+of devices.
 
 ```
 Copyright (C) 2025 Jasper Boom

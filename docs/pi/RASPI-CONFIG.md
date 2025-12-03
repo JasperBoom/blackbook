@@ -1,4 +1,4 @@
-# Raspberry Pi Configuration Reference (`raspi-config`)
+# Raspberry Pi Configuration (`raspi-config`)
 This document provides a structured guide to the options available in
 `raspi-config`, the official Raspberry Pi configuration tool. It covers system,
 display, interface, localisation, and advanced options, with explanations and
