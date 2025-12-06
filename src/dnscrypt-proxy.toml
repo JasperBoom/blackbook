@@ -37,7 +37,7 @@ server_names = ['cloudflare', 'quad9-dnscrypt-ip4-filter-pri', 'meganerd', 'mega
 ## like: ['127.0.0.1:53', '[::1]:53'], because the port will be "in use" and
 ## dnscrypt-proxy will not start.
 
-listen_addresses = ['0.0.0.0:53']
+listen_addresses = ['0.0.0.0:53530']
 
 ## Maximum number of simultaneous client connections to accept.
 
@@ -396,7 +396,7 @@ reject_ttl = 10
 ## Route queries for specific domains to a dedicated set of servers.
 ## See the `example-forwarding-rules.txt` file for an example.
 
-forwarding_rules = 'forwarding-rules.txt'
+#forwarding_rules = 'forwarding-rules.txt'
 
 ###############################################################################
 #                              Cloaking                                       #

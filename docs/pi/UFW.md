@@ -10,6 +10,8 @@ VPN such as WireGuard, which requires opening at least one port to the outside
 world. With UFW, the only entry points to the Pi are those
 specifically configured.
 
+[Tutorial](https://www.wundertech.net/raspberry-pi-firewall-configuration-with-ufw/)
+
 ## Basic Setup
 ```bash
 # Deny all incoming traffic by default.
@@ -25,7 +27,7 @@ sudo ufw allow 51820/udp
 sudo ufw allow from 192.168.178.0/24 to any port 22
 sudo ufw allow from 10.3.70.0/24 to any port 22
 
-# Allow LAN devices & VPN clients to query DNS (DNSCrypt Proxy).
+# Allow LAN devices & VPN clients to query DNS (Pi-Hole & DNSCrypt Proxy).
 sudo ufw allow from 192.168.178.0/24 to any port 53 proto udp
 sudo ufw allow from 192.168.178.0/24 to any port 53 proto tcp
 sudo ufw allow from 10.3.70.0/24 to any port 53 proto udp
@@ -34,6 +36,10 @@ sudo ufw allow from 10.3.70.0/24 to any port 53 proto tcp
 # Allow LAN access to Monitoring UI (DNSCrypt Proxy).
 sudo ufw allow from 192.168.178.0/24 to any port 8001
 sudo ufw allow from 10.3.70.0/24 to any port 8001
+
+# Allow LAN access to Monitoring UI (Pi-Hole).
+sudo ufw allow from 192.168.178.0/24 to any port 8002
+sudo ufw allow from 10.3.70.0/24 to any port 8002
 
 # Enable logging for blocked connections.
 sudo ufw logging on

@@ -7,6 +7,8 @@ Below are some commands I used to set up or configure WireGuard, as well as
 commands I reference during installation or afterwards for testing and
 management.
 
+[Tutorial](https://www.wundertech.net/setup-wireguard-on-a-raspberry-pi-vpn-setup-tutorial/)
+
 ## Commands
 These are commands I can use to test or configure after WireGuard is installed.
 ```bash

@@ -4,6 +4,8 @@ outside world. This ensures that when devices on the local network attempt to
 reach, for example, a website, DNS information is requested securely without
 disclosing unnecessary private information.
 
+[Tutorial](https://hndrk.blog/tutorial-pi-hole-and-dnscrypt/)
+
 ## Configuration
 DNSCrypt Proxy can be downloaded using the instructions
 in its GitHub repository:
@@ -15,6 +17,9 @@ is stored in the [docs](../docs) folder of this repository.
 DNSCrypt requires port **53**, as this is the standard DNS port. Ensure that the
 firewall allows communication on this port on the Raspberry Pi. See the
 firewall configuration guide in [UFW.md](./UFW.md).
+
+A note is, when combining with Pi-hole, set the port to 53530 instead 53.
+Pi-hole will use 53 and forward all outbound looksup to DNSCrypt.
 
 ## Common commands
 Below is a list of commands used to start, stop, and test the service:
@@ -39,6 +44,9 @@ sudo systemctl is-enabled dnscrypt-proxy
 
 # Enable the service to start automatically at boot.
 sudo systemctl enable dnscrypt-proxy
+
+# Check the logs.
+sudo journalctl -u dnscrypt-proxy.service -b
 
 # Test DNS resolution via the proxy.
 dig @127.0.0.1 hndrk.blog
