@@ -7,6 +7,10 @@
 - Added notes for DNSCrypt.
 - Added notes for WireGuard.
 - Added notes for UFW.
+- Added a config for Pi-hole.
+- Added a config for time determination for Pi-hole, this is an exception for
+  a service which fails due to the privacy settings that DNSCrypt enforces.
+- Added a script for Wake-On-Lan for my home PC.
 
 ```
 Copyright (C) 2025 Jasper Boom

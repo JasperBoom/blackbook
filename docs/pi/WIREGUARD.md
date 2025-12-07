@@ -20,6 +20,18 @@ pivpn list
 
 # Add new client.
 pivpn add
+
+# Restart WireGuard.
+sudo systemctl restart wg-quick@wg0
+
+# Make sure IP forwarding is handled correctly from the VPN LAN to local LAN.
+sudo iptables -t nat -A POSTROUTING -s 10.3.70.0/24 -o eth0 -j MASQUERADE
+```
+
+## IP Forwarding
+Command below were required to get outbound internet working on phones.
+```bash
+sudo sysctl -w net.ipv4.ip_forward=1
 ```
 
 ## Dynamic DNS Settings
@@ -35,6 +47,18 @@ e7ad206d-904e-4238-9c95-aac72a607777
 zoneedit1
 www.duckdns.org/nic/update?hostname=ac-25-jb&wildcard=NOCHG&mx=NOCHG&backmx=NOCHG
 ```
+
+## Updating The Configuration
+After first install, a configuration file is stored here
+`/etc/pivpn/wireguard/setupVars.conf`. These values are used when new clients
+are added.
+
+New client configs actually live here `/etc/wireguard/configs` and not in
+`~/configs`, as it might seem, these are just copies for easy access (the
+`/etc` version is restricted access).
+
+Make sure to adjust settings here, and restart WireGuard, also recreate the
+clients, otherwise those settings are not live.
 
 ```
 Copyright (C) 2025 Jasper Boom

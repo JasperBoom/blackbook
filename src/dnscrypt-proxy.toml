@@ -600,15 +600,15 @@ format = 'tsv'
 ## Path to the file of allow list rules (absolute, or relative to the same
 ## directory as the config file).
 
-# allowed_names_file = 'allowed-names.txt'
+allowed_names_file = 'allowed-names.txt'
 
 ## Optional path to a file logging allowed queries.
 
-# log_file = 'allowed-names.log'
+log_file = 'allowed-names.log'
 
 ## Optional log format: tsv or ltsv (default: tsv).
 
-# log_format = 'tsv'
+log_format = 'tsv'
 
 ###############################################################################
 #           Pattern-based allowed IPs lists (blocklists bypass)               #

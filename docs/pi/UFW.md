@@ -27,6 +27,9 @@ sudo ufw allow 51820/udp
 sudo ufw allow from 192.168.178.0/24 to any port 22
 sudo ufw allow from 10.3.70.0/24 to any port 22
 
+# Protect the Pi from DNS queries from the internet.
+sudo ufw deny in on eth0 to 192.168.178.201 port 53
+
 # Allow LAN devices & VPN clients to query DNS (Pi-Hole & DNSCrypt Proxy).
 sudo ufw allow from 192.168.178.0/24 to any port 53 proto udp
 sudo ufw allow from 192.168.178.0/24 to any port 53 proto tcp
@@ -42,7 +45,7 @@ sudo ufw allow from 192.168.178.0/24 to any port 8002
 sudo ufw allow from 10.3.70.0/24 to any port 8002
 
 # Enable logging for blocked connections.
-sudo ufw logging on
+sudo ufw logging medium
 
 # Enable the firewall.
 sudo ufw enable
@@ -53,6 +56,9 @@ sudo ufw status numbered
 
 # Delete a specific rule (example: rule 4).
 sudo ufw delete 4
+
+# If reloading is required.
+sudo ufw reload
 
 # Confirm no other services are exposed.
 sudo iptables -L -v -n

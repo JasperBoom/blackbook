@@ -169,7 +169,7 @@
   # Allowed values are:
   #     a valid interface name
   #     default = ""
-  interface = "eth0"
+  interface = "eth0,wg0"
 
   # Add an A, AAAA and PTR record to the DNS. This adds a singular name to the
   # DNS with associated IPv4 (A) and IPv6 (AAAA) records.
@@ -219,7 +219,7 @@
   #       configure the listening mode in auxiliary configuration files. This
   #       option is really meant for advanced users only, support for this
   #       option may be limited.
-  listeningMode = "LOCAL"
+  listeningMode = "SINGLE"
 
   # Log DNS queries and replies to pihole.log.
   #

@@ -18,23 +18,34 @@ DNSCrypt requires port **53**, as this is the standard DNS port. Ensure that the
 firewall allows communication on this port on the Raspberry Pi. See the
 firewall configuration guide in [UFW.md](./UFW.md).
 
-A note is, when combining with Pi-hole, set the port to 53530 instead 53.
-Pi-hole will use 53 and forward all outbound looksup to DNSCrypt.
+**NOTE**, when combining with Pi-hole, set the port to **53530** instead of
+**53**. Pi-hole will use 53 and forward all outbound looksup to DNSCrypt.
 
-## Common commands
+## Change The UI Port
+Change the default port on which the UI can be accessed. It will try to use
+80 by default, but almost all UI software will try to use that, switch to
+**8001**.
+
+Edit the `dnscrypt-proxy.toml` file for this.
+```bash
+## Listen address for the monitoring UI.
+listen_address = "0.0.0.0:8001"
+```
+
+## Common Commands
 Below is a list of commands used to start, stop, and test the service:
 ```bash
 # Reload the systemctl daemon.
 sudo systemctl daemon-reload
-
-# Restart the dnscrypt-proxy service.
-sudo systemctl restart dnscrypt-proxy
 
 # Stop the dnscrypt-proxy service.
 sudo systemctl stop dnscrypt-proxy
 
 # Start the dnscrypt-proxy service.
 sudo systemctl start dnscrypt-proxy
+
+# Restart the dnscrypt-proxy service.
+sudo systemctl restart dnscrypt-proxy
 
 # Check the dnscrypt-proxy service status.
 sudo systemctl status dnscrypt-proxy
@@ -47,12 +58,6 @@ sudo systemctl enable dnscrypt-proxy
 
 # Check the logs.
 sudo journalctl -u dnscrypt-proxy.service -b
-
-# Test DNS resolution via the proxy.
-dig @127.0.0.1 hndrk.blog
-
-# Scan local network devices (useful for troubleshooting).
-sudo nmap -sP 192.168.178.0/24
 ```
 
 ```

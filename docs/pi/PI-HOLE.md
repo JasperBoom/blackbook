@@ -15,7 +15,7 @@ sudo bash basic-install.sh
 It will force you through a installation setup for which most options should
 be default, configuration can be done via the UI later.
 
-## Change the UI port
+## Change The UI Port
 In order to change the port on which you can reach the UI for Pi-hole, edit
 the `/etc/pihole/pihole.toml` file.
 
@@ -28,7 +28,7 @@ Now change this section:
 port = "8002o,[::]:8002o"
 ```
 
-## Common commands
+## Common Commands
 Below is a list of commands used to start, stop, and test the service:
 ```bash
 # Reload the systemctl daemon.
